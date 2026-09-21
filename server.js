@@ -4,9 +4,15 @@ const app = express();
 const PORT = 3000;
 
 app.get('/status', (req, res) => {
-    res.json({ status: 'Application is running successfully' });
+    res.json({
+        status: 'Application is running successfully'
+    });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
+module.exports = app;
