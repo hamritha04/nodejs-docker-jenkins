@@ -3,12 +3,11 @@ const app = require('./server');
 
 describe('GET /status', () => {
     test('should return application status', async () => {
-        const response = await request(app)
-            .get('/status');
+        const response = await request(app).get('/status');
 
         expect(response.statusCode).toBe(200);
         expect(response.body.status).toBe(
-            'Application is running successfully'
+            'Node.js application deployed through CI/CD'
         );
     });
 });
