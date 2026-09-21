@@ -7,7 +7,7 @@ describe('GET /status', () => {
 
         expect(response.statusCode).toBe(200);
         expect(response.body.status).toBe(
-            'Node.js application deployed through CI/CD'
+            'Test automatic CI/CD'
         );
     });
 });
