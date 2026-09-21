@@ -5,7 +5,7 @@ const PORT = 3000;
 
 app.get('/status', (req, res) => {
     res.json({
-        status: 'Node.js application deployed through CI/CD'
+        status: 'Test automatic CI/CD'
     });
 });
 
